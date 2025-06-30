@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import React, { useState } from "react";
 import "./App.css";
 
@@ -22,6 +23,7 @@ function App() {
       <div className="counter-box">
         <p><strong>Words:</strong> {wordCount}</p>
         <p><strong>Letters:</strong> {letterCount}</p>
+        <SpeedInsights />
       </div>
     </div>
   );
