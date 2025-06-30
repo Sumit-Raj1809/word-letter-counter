@@ -1,23 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [text, setText] = useState("");
+
+  const handleChange = (e) => {
+    setText(e.target.value);
+  };
+
+  const wordCount = text.trim() === "" ? 0 : text.trim().split(/\s+/).length;
+  const letterCount = text.replace(/\s+/g, "").length;
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Word and Letter Counter</h1>
+      <textarea
+        placeholder="Type your text here..."
+        value={text}
+        onChange={handleChange}
+      ></textarea>
+      <div className="counter-box">
+        <p><strong>Words:</strong> {wordCount}</p>
+        <p><strong>Letters:</strong> {letterCount}</p>
+      </div>
     </div>
   );
 }

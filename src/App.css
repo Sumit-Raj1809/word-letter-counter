@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+/* Reset and box model */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: linear-gradient(135deg, #e0f7fa, #e1bee7);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
+/* Main App container */
+.App {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 650px;
+  text-align: center;
+  transition: 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Heading */
+h1 {
+  font-size: 2.2rem;
+  color: #4a148c;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
 }
+
+/* Textarea styling */
+textarea {
+  width: 100%;
+  height: 250px;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  border-radius: 12px;
+  border: 2px solid #ce93d8;
+  resize: none;
+  transition: 0.3s ease;
+  background-color: #fdf4ff;
+  color: #4a148c;
+}
+
+textarea:focus {
+  border-color: #8e24aa;
+  outline: none;
+  box-shadow: 0 0 8px rgba(142, 36, 170, 0.2);
+}
+
+/* Counter box */
+.counter-box {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-around;
+  background: #f3e5f5;
+  border-radius: 12px;
+  padding: 1.2rem;
+  font-size: 1.1rem;
+  color: #4a148c;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+
